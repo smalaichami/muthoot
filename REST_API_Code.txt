@@ -1,0 +1,244 @@
+curl -v POST 'https://api.openfigi.com/v1/mapping' --header 'Content-Type: text/json'  --data '[{"idType":"ID_WERTPAPIER","idValue":"851399","exchCode":"US"}]'
+
+
+
+var request = require('request');
+
+var dataString = '[{"idType":"ID_WERTPAPIER","idValue":"851399","exchCode":"US"}]';
+
+var options = {
+    url: 'https://api.openfigi.com/v1/mapping',
+    method: 'POST',
+    body: dataString
+};
+
+function callback(error, response, body) {
+    if (!error && response.statusCode == 200) {
+        console.log(body);
+    }
+}
+
+request(options, callback);
+
+
+
+https://openfigi.com/api#api-key
+
+curl -v -X POST 'https://api.openfigi.com/v1/mapping'   \
+     --header 'Content-Type: text/json'             \
+     --data '[{"idType":"ID_WERTPAPIER","idValue":"851399","exchCode":"US"}]'
+
+
+curl -v -X POST 'https://api.openfigi.com/v1/mapping'                 \
+     --header 'Content-Type: text/json'                           \
+     --header 'X-OPENFIGI-APIKEY: b16dfc0c-04de-4deb-a5dc-8f03cb01e199'     \
+     --data '[{"idType":"ID_WERTPAPIER","idValue":"851399"}]'
+
+
+
+
+
+
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Users\Cloutics>cd\multichain
+The system cannot find the path specified.
+
+C:\Users\Cloutics>cd\saravana
+
+C:\saravana>cd multichain
+
+C:\saravana\multichain>node
+>
+> var request = require('request');
+undefined
+>
+> var dataString = '[{"idType":"ID_WERTPAPIER","idValue":"851399","exchCode":"US
+"}]';
+undefined
+>
+> var options = {
+...     url: 'https://api.openfigi.com/v1/mapping',
+...     method: 'POST',
+...     body: dataString
+... };
+undefined
+>
+> function callback(error, response, body) {
+...     if (!error && response.statusCode == 200) {
+.....         console.log(body);
+.....     }
+... }
+undefined
+>
+> request(options, callback);
+Request {
+  domain:
+   Domain {
+     domain: null,
+     _events: { error: [Function] },
+     _eventsCount: 1,
+     _maxListeners: undefined,
+     members: [] },
+  _events:
+   { error: [Function: bound ],
+     complete: [Function: bound ],
+     pipe: [Function] },
+  _eventsCount: 3,
+  _maxListeners: undefined,
+  method: 'POST',
+  body: '[{"idType":"ID_WERTPAPIER","idValue":"851399","exchCode":"US"}]',
+  callback: [Function],
+  readable: true,
+  writable: true,
+  explicitMethod: true,
+  _qs:
+   Querystring {
+     request: [Circular],
+     lib: { formats: [Object], parse: [Function], stringify: [Function] },
+     useQuerystring: undefined,
+     parseOptions: {},
+     stringifyOptions: {} },
+  _auth:
+   Auth {
+     request: [Circular],
+     hasAuth: false,
+     sentAuth: false,
+     bearerToken: null,
+     user: null,
+     pass: null },
+  _oauth: OAuth { request: [Circular], params: null },
+  _multipart:
+   Multipart {
+     request: [Circular],
+     boundary: '3a07c269-da51-46e0-8b94-666f89a3cf1b',
+     chunked: false,
+     body: null },
+  _redirect:
+   Redirect {
+     request: [Circular],
+     followRedirect: true,
+     followRedirects: true,
+     followAllRedirects: false,
+     followOriginalHttpMethod: false,
+     allowRedirect: [Function],
+     maxRedirects: 10,
+     redirects: [],
+     redirectsFollowed: 0,
+     removeRefererHeader: false },
+  _tunnel:
+   Tunnel {
+     request: [Circular],
+     proxyHeaderWhiteList:
+      [ 'accept',
+        'accept-charset',
+        'accept-encoding',
+        'accept-language',
+        'accept-ranges',
+        'cache-control',
+        'content-encoding',
+        'content-language',
+        'content-location',
+        'content-md5',
+        'content-range',
+        'content-type',
+        'connection',
+        'date',
+        'expect',
+        'max-forwards',
+        'pragma',
+        'referer',
+        'te',
+        'user-agent',
+        'via' ],
+     proxyHeaderExclusiveList: [] },
+  headers: { host: 'api.openfigi.com', 'content-length': 63 },
+  setHeader: [Function],
+  hasHeader: [Function],
+  getHeader: [Function],
+  removeHeader: [Function],
+  localAddress: undefined,
+  pool: {},
+  dests: [],
+  __isRequestRequest: true,
+  _callback: [Function: callback],
+  uri:
+   Url {
+     protocol: 'https:',
+     slashes: true,
+     auth: null,
+     host: 'api.openfigi.com',
+     port: 443,
+     hostname: 'api.openfigi.com',
+     hash: null,
+     search: null,
+     query: null,
+     pathname: '/v1/mapping',
+     path: '/v1/mapping',
+     href: 'https://api.openfigi.com/v1/mapping' },
+  proxy: null,
+  tunnel: true,
+  setHost: true,
+  originalCookieHeader: undefined,
+  _disableCookies: true,
+  _jar: undefined,
+  port: 443,
+  host: 'api.openfigi.com',
+  path: '/v1/mapping',
+  httpModule:
+   { Server: { [Function: Server] super_: [Object] },
+     createServer: [Function],
+     globalAgent:
+      Agent {
+        domain: [Object],
+        _events: [Object],
+        _eventsCount: 1,
+        _maxListeners: undefined,
+        defaultPort: 443,
+        protocol: 'https:',
+        options: [Object],
+        requests: {},
+        sockets: {},
+        freeSockets: {},
+        keepAliveMsecs: 1000,
+        keepAlive: false,
+        maxSockets: Infinity,
+        maxFreeSockets: 256,
+        maxCachedSessions: 100,
+        _sessionCache: [Object] },
+     Agent: { [Function: Agent] super_: [Object] },
+     request: [Function],
+     get: [Function] },
+  agentClass:
+   { [Function: Agent]
+     super_: { [Function: Agent] super_: [Object], defaultMaxSockets: Infinity }
+ },
+  agent:
+   Agent {
+     domain:
+      Domain {
+        domain: null,
+        _events: [Object],
+        _eventsCount: 1,
+        _maxListeners: undefined,
+        members: [] },
+     _events: { free: [Function] },
+     _eventsCount: 1,
+     _maxListeners: undefined,
+     defaultPort: 443,
+     protocol: 'https:',
+     options: { path: null },
+     requests: {},
+     sockets: {},
+     freeSockets: {},
+     keepAliveMsecs: 1000,
+     keepAlive: false,
+     maxSockets: Infinity,
+     maxFreeSockets: 256,
+     maxCachedSessions: 100,
+     _sessionCache: { map: {}, list: [] } } }
+>
+
+
+
